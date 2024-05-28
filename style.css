@@ -1,0 +1,188 @@
+.bmenu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.logo {
+    width: 33.3%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.navbar {
+    font-family: "futura-pt", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 5.28px;
+    
+
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+/*a:active = den side man er på. Så når man klikker, bliver den underlined*/
+a:active {
+    text-decoration: underline;
+}
+  .header {
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5%;
+}
+/*Overskrifter*/
+h2 {
+    font-family: "futura-pt", sans-serif;
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.4px;
+
+   padding-left: 20%;
+   padding-top: 5%;
+}
+
+.omos {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.92px;
+
+    padding-left: 20%;
+    width: 60%;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+/*for at få footeren til at sidde pænt lol*/
+.footflex {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 10%;
+    padding-bottom: 2%;
+}
+
+.findhold {
+    max-width: 190px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+
+/*overskirfter i footeren*/
+h3 {
+    font-family: "futura-pt", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+}
+
+.ftext {
+    font-family: "Futura PT";
+    font-size: 12px;
+    font-weight: 450;
+    letter-spacing: 1.92px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 125px;
+}
+
+i {
+    color: #A03C49;
+}
+
+/*mest til siden Nyheder*/
+
+#drop, #begivenheder {
+    font-family: "futura PT";
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 7px;
+    padding-left: 16%;
+    padding-top: 5%;
+}
+
+#noeventtxt {
+    font-family: "futura PT";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-left: 16%;
+    padding-top: 5%;
+}
+
+.timerinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-family: "futura PT";
+    letter-spacing: 8.4px;
+    font-size: 14px;
+}
+
+/*styling af teksten over countdown*/
+#D, #T, #M, #S {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5%;
+    width: 20%;
+}
+.timer {
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    padding: 20px;
+    letter-spacing: 20px;
+    text-indent: 20px;
+}
+
+/*styling af countdown*/
+#days, #hours, #minutes, #seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #A03C49;
+    font-family: "Futura PT";
+    font-size: 45px;
+    font-weight: 600;
+    width: 20%;
+}
+/*fjerner noget tekst der beskriver hvad de forskellige tal i countdown er*/
+span {
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px)
