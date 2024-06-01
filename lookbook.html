@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- herunder står navnet som kommer til at stå i fanen, hvilket bare er cazora --> 
+    <!-- herunder står navnet som kommer til at stå i fanen, hvilket bare er cazora -->
     <title>CAZORA</title>
     <!-- herunder er links til de forskellige stylesheet i css, de forskellige fonttyper og det sidste er links til iconer  -->
     <link rel="stylesheet" href="style.css">
@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="https://use.typekit.net/ktr6rzr.css">
     <script src="https://kit.fontawesome.com/c86c3f5bf6.js" crossorigin="anonymous"></script>
     <script src="mobilemenu.js"></script>
+
 </head>
 <body>
-<!-- billede af Logo med alt text -->
-    <img class="logo" src="pics/RedLogo.png" alt="CAZORA in a cherry red color">
+    <!-- billede af Logo med alt text -->
+    <img class="logo" src="pics/RedLogo.png" alt="CAZORA in a burgundy color">
 
     <!--sekundær logo til mobil-->
     <img class="twologo" src="pics/Secondary logo.png" alt="cherry red circle logo">
 
-<!--Burgermenu til mobilversion-->
+    <!--Burgermenu til mobilversion-->
     <a href="javascript:void(0);" class="bmenu" onclick="opennav()">
         <i class="fa-solid fa-bars"></i>
     </a>
@@ -34,35 +35,37 @@
 <!--Navigation på desktop med link til hver af undersiderne. her ses det at index siden har class=current, hvilket i css vil ses som at der
 kommer en streg under den side man er på, i dette tilfælde er det Om Os siden-->
     <ul class="navbar">
-        <li class="current"><a href="index.html">Om Os</a></li>
+        <li><a href="index.html">Om Os</a></li>
         <li><a href="nyheder.html">Nyheder</a></li>
-        <li><a href="lookbook.html">Lookbook</a></li>
+        <li class="current"><a href="lookbook.html">Lookbook</a></li>
         <li><a href="about.asp">Kontakt</a></li>
   </ul>
 
-  <!-- mobilnavigation-->
-  <ul class="mobilnav">
-        <li class="current"><a href="index.html">Om Os</a></li>
-        <li><a href="nyheder.html">Nyheder</a></li>
-        <li><a href="lookbook.html">Lookbook</a></li>
-        <li><a href="about.asp">Kontakt</a></li>
-    </ul>
+    <!--Lookbook Grid-->
 
-  <!--coverbillede til Om Os siden med alt-->
-  <img class="header" src="pics/20240513_120653952_iOS.jpg" alt="store manager smiling and looking into the camera">
+        <div class="photo-gallery">
+           
 
-  <h2>Velkommen til!</h2>
+                <img src="pics/hertop.png" alt="her top"
+                width="30%" class="photo" >
+        
+                <img src="pics/joe.png" alt="joe"
+                width="30%" class="photo" >
+            
+                <img src="pics/lystop.png" alt="lys top"
+                width="30%" class="photo">
+            
+                <img src="pics/shoes.png" alt="sko"
+                width="30%" class="photo" >
 
-    <p class="omos">
-        Når du træder ind i Cazora Vintage på Birkegade i København, åbner du døren til en verden af tidløs elegance og personlig stil. Vores butik er ikke bare et sted, hvor du kan shoppe; det er et kulturelt fristed fyldt med moderne vintagetøj og en varm, imødekommende atmosfære.
-        <br>
-        <br>
-        Vi tror på, at mode skal være for alle, uanset køn eller udtryk, og det er netop derfor, vores mantra lyder: “Cazora Vintage is for everyone, regardless of gender expression”. Hos os handler det ikke kun om at finde den perfekte kjole eller den mest unikke jakke; det handler om at finde et stykke historie, der passer til din personlige fortælling.
-        <br>
-        <br>
-        Vores passionerede team står altid klar til at hjælpe dig med at finde det perfekte outfit eller bare til en hyggelig snak om vintage og stil. Så kom forbi, træd ind i fortiden og lad os sammen skabe nye minder og historier. Velkommen til Cazora Vintage, hvor historie og stil mødes på den mest personlige måde.
-    </p>
+                <img src="pics/storefront.png" alt="store front"
+                width="30%" class="photo" >
 
+                <img src="pics/ven.png" alt="ven"
+                width="30%" class="photo" >
+                    
+        </div>
+ 
 <!--herunder ses footer med informationer. vi har sikret os at alt med f betyder footer, derfor hedder
 det bl.a. 'findhold' for footer-indhold som en nem class. Derudover har vi sat link ind til cazoras allerede
 eksisterende instagram, og med henblik på at få de andre links ind også i fremtiden-->

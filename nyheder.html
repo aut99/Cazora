@@ -1,37 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--sproget er dansk-->
+<html lang="da">
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- herunder står navnet som kommer til at stå i fanen, hvilket bare er cazora -->
         <title>CAZORA</title>
+        <!-- herunder er links til de forskellige stylesheet i css, de forskellige fonttyper og det sidste er links til iconer  -->
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/ktr6rzr.css">
         <script src="https://kit.fontawesome.com/c86c3f5bf6.js" crossorigin="anonymous"></script>
+        <script src="mobilemenu.js"></script>
+
+        <!-- link til javascript countdown som skal vises på siden. -->
+        <script src="nyheder.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+<!-- billede af Logo med alt text -->
    <img class="logo" src="pics/RedLogo.png" alt="CAZORA in a burgundy color">
 
+   <!--sekundær logo til mobil-->
+   <img class="twologo" src="pics/Secondary logo.png" alt="cherry red circle logo">
+
+
+<!--Burgermenu til mobilversion-->
+<a href="javascript:void(0);" class="bmenu" onclick="opennav()">
+    <i class="fa-solid fa-bars"></i>
+</a>
+
+<a class="xmenu" onclick="closenav()">
+    <i class="fa-solid fa-xmark"></i>
+</a>
+
+<!-- Navigation på desktop med link til hver af undersiderne. Man kan se at nyheder har fået class current, hvilket betyder den får en streg under, da det er den nuværende side som er i brug-->
    <ul class="navbar">
         <li><a href="index.html">Om Os</a></li>
         <li class="current"><a href="nyheder.html">Nyheder</a></li>
-        <li><a href="contact.asp">Lookbook</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
         <li><a href="about.asp">Kontakt</a></li>
   </ul>
 
-  <script src="nyheder.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- 
+  <!-- mobilnavigation-->
+  <ul class="mobilnav">
+        <li><a href="index.html">Om Os</a></li>
+        <li class="current"><a href="nyheder.html">Nyheder</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="about.asp">Kontakt</a></li>
+  </ul>
+
+<!-- tekst hvor der herudner vil kommme information om næste 'drop' hvilket så fører videre til man skal kigge på countdown -->
   <p id="drop">Næste drop:</p>
-  
+
+<!-- informationen til når kunden kigger på countdown at der står ordene 'dage, timer, minutter og sekunder' tydeligt over countdown tallene-->
   <div class="timerinfo">
         <div id="D">Dage</div>
         <div id="T">Timer</div> 
         <div id="M">Minutter</div> 
         <div id="S">Sekunder</div>  
   </div>
+
+<!-- selve tallene som tæller ned i forskellige bokse -->
   <div class="timer">
         <div id="days"></div>
         <div id="hours"></div>
@@ -39,9 +71,12 @@
         <div id="seconds"></div>
   </div>
 
+<!-- her vil der blive opdateret med kommende arrangementer hvor vi med tiden vil have link til facebook begivenheder der kan klikkes på. 
+Dog fordi vi ikke har en facebook til cazora endnu, har vi valgt at skrive et eksempel på hvis der ikke er nogle begivenheder i sigte-->
     <p id="begivenheder">Kommende arrangementer: </p>
     <p id="noeventtxt">Der er ikke noget her lige nu :(</p>
 
+  <!-- herunder er vores footer det samme som i index -->
     <footer>
         <div class="footflex">
             <div class="findhold">

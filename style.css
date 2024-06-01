@@ -1,9 +1,5 @@
-.bmenu {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+/* nedenunder er alt på desktop i fokus */
+/* logo style for vores cazora img*/
 .logo {
     width: 33.3%;
     display: block;
@@ -13,6 +9,21 @@
     padding-bottom: 4%;
 }
 
+/*dette gør at det lille logo ikke bliver vist på desktop version*/
+.twologo {
+    display: none;
+}
+
+/*dette er burgermenuen, der bliver skjult når vi er i desktop mode*/
+.bmenu {
+    display: none;
+}
+/*samme med det her X*/
+.xmenu {
+    display: none;
+}
+
+/* navigationsbarens tekst */
 .navbar {
     font-family: "futura-pt", sans-serif;
     font-size: 24px;
@@ -21,18 +32,25 @@
     line-height: normal;
     letter-spacing: 5.28px;
     
-
+    /* navigationsbarens style i form af placering*/
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
+.mobilnav {
+    display: none;
+}
+
+/* tekst i navigationsbaren*/
 a {
     text-decoration: none;
     color: black;
 }
 
+/* der kommer en linje under den side man er inde på i navigationsbaren. altså siden i brug*/
 .current {
     text-decoration: underline;
 }
@@ -41,6 +59,8 @@ a {
 a:active {
     text-decoration: underline;
 }
+
+/* coverbilledet */
   .header {
     width: 98%;
     padding-left: 1%;
@@ -61,6 +81,7 @@ h2 {
    padding-top: 5%;
 }
 
+/* teksten til om os siden*/
 .omos {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -73,12 +94,13 @@ h2 {
     width: 60%;
 }
 
+/* footerens position*/
 footer {
     bottom: 0;
     width: 100%;
 }
 
-/*for at få footeren til at sidde pænt lol*/
+/*for at få footeren til at stå pænt i form af position og fylde*/
 .footflex {
     display: flex;
     justify-content: center;
@@ -87,6 +109,7 @@ footer {
     padding-bottom: 2%;
 }
 
+/* står for footer indhold, og beskriver hvordan det skal stå*/
 .findhold {
     max-width: 190px;
     padding-right: 5%;
@@ -102,6 +125,7 @@ h3 {
     letter-spacing: 2.4px;
 }
 
+/* footer tekst*/
 .ftext {
     font-family: "Futura PT";
     font-size: 12px;
@@ -109,18 +133,21 @@ h3 {
     letter-spacing: 1.92px;
 }
 
+/* ikoner der bliver brugt og deres position og størrelse */
 .icons {
     display: flex;
     justify-content: space-between;
     max-width: 125px;
 }
 
+/*Dette er farven på ikonerne og links*/
 i {
     color: #A03C49;
 }
 
-/*mest til siden Nyheder*/
+/*herunder er det mest brugt til siden Nyheder*/
 
+/* det næste drop og kommende begivenheder. Dette er tekstens font, plasering og størrelse */
 #drop, #begivenheder {
     font-family: "futura PT";
     font-size: 26px;
@@ -130,6 +157,7 @@ i {
     padding-top: 5%;
 }
 
+/* hvis der i øjeblikket ikke er begivenheder (som nu) vil der være noevent tekst */
 #noeventtxt {
     font-family: "futura PT";
     font-size: 16px;
@@ -139,6 +167,7 @@ i {
     padding-top: 5%;
 }
 
+/* timerinfo er den tekst der beskriver boksen vi har sat om beskrivelsen i countdown. vore #D, #T, #M og #S sidder derfor inde i denne boks */
 .timerinfo {
     display: flex;
     flex-direction: row;
@@ -149,13 +178,15 @@ i {
     font-size: 14px;
 }
 
-/*styling af teksten over countdown*/
+/*styling af teksten over countdown, altså dage, timer, minutter og sekunder*/
 #D, #T, #M, #S {
     display: flex;
     justify-content: center;
     padding-top: 2.5%;
     width: 20%;
 }
+
+/*timer er boksen for tallene i countdown så de står i en ''boks'' sammen */
 .timer {
     display: flex;
     justify-content: center;
@@ -165,7 +196,7 @@ i {
     text-indent: 20px;
 }
 
-/*styling af countdown*/
+/*styling af countdown så de er placeret i center af hver deres boks inde i classen timer*/
 #days, #hours, #minutes, #seconds {
     display: flex;
     flex-direction: column;
@@ -178,11 +209,107 @@ i {
     font-weight: 600;
     width: 20%;
 }
-/*fjerner noget tekst der beskriver hvad de forskellige tal i countdown er*/
-span {
-  display: block;
-  font-size: 20px;
-  color: white;
+
+
+/*CSS til lookbook siden*/
+
+/*photo gallery div, der er stylet i en grid formation*/
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding-top: 5%;
+
 }
 
-@media only screen and (min-width: 768px)
+/*styling af selve billederne i photoggrid, de har fået padding så der er en smule mellemrum imellem dem*/
+.photo {
+    padding: 1%;
+}
+
+/* herunder er vores media og min-width på 600px */ 
+@media only screen and (max-width: 600px) {
+    
+    .twologo {
+        display: block;
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .bmenu { 
+        display: block;
+        text-align: right;
+        width: 99%;
+        margin-top: -50px;
+    }
+
+    .xmenu {
+        display: none;
+        text-align: right;
+        width: 99%;
+        margin-top: -50px;
+    }
+
+  /*styler ikonet til vores burgerbar*/  
+    .bmenu i {
+        font-size: 44px;
+    }
+
+    .xmenu i {
+        font-size: 44px;
+    }
+
+    .navbar {
+        display: none;
+    } 
+
+    .mobilnav {
+        display: none;
+        margin-top: 15%;
+    }
+
+    .mobilnav li {
+        list-style-type: none;
+        margin-bottom: 100px;
+    }
+
+    /*Tager kun fat i a tagget inde i mobilnav*/
+    .mobilnav a {
+        font-family: "futura PT";
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    /*styler siden "nyheder" i mobilversion*/
+    #drop {
+        margin-top: 5%;
+    }
+    .timer {
+        display: flex;
+        justify-content: center;
+        line-height: 1;
+        padding: 5px;
+        letter-spacing: 2px;
+        text-indent: 2px;
+        margin-bottom: 25%;
+    }
+    .timerinfo {
+        letter-spacing: 2.4px;
+        font-size: 12px;
+    }
+
+    #drop, #begivenheder {
+        padding-left: 8%;
+        font-size: 20px;
+    }
+
+    #noeventtxt {
+        margin-bottom: 40%;
+    }
+}
